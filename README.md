@@ -463,9 +463,9 @@ const functionName = () => {
 
 
 # FORM INPUTS
-    - Forms are the primary ways users with applications
-    - We need to make our applications interactive and dynamic
-    - JavaScript helps us access and manipulate form inputs real time
+    - Forms are the primary ways users interact with applications.
+    - We need to make our applications interactive and dynamic.
+    - JavaScript helps us access and manipulate form inputs real time.
 
 - Using JavaScript you can:
     1. Read user input
