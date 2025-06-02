@@ -27,7 +27,7 @@ Data Types
 
             ARRAYS
 Arrays
-- A special variable or data structure that stores multiple values - equivalent to a list in Python
+- A special variable or data structure or container that stores multiple values - equivalent to a list in Python
 
 # Properties of Arrays
     1. Mutable - can change elements of arrays.
@@ -40,6 +40,450 @@ let name = "John"
 # Why we use arrays?
     1. Store multiple values
     2. Store values of different data types in one container
-    3. Enables iteration / looping through data
-    4. Orders items / values
+    3. Enables iteration/looping through data
+    4. Orders items/values
     5. Manipulate multiple items
+
+# Defining Arrays and Array Operations
+
+    Types of Arrays
+1. One-dimensional arrays - 1D
+        let arr = [1,2,"Mark"]
+2. Multi-dimensional arrays - 2D, 3D i.e. similar to matrices.
+
+# Array Operations
+    - Basic actions/manipulations that can be performed on an array.
+    - Range from creating an array, indexing, changing values, adding & removing values and replacing values.
+
+# Examples of array operations/actions:-
+    1. unshift() - adds an element at the start of an array
+    2. push() - adds an element at the end of an array
+    3. shift() - removes an element at the start of an array
+    4. pop() - removes the last element of an array
+    5. splice() - can add, replace or remove elements
+    6. concat() - combines arrays into a single array
+    7. lastindexOf() - returns the index of the last occurrence of an element
+    8. slice() - divides an array into portions
+    9. reverse() - changes the order of the array - 
+    10. length() - checks for the size of an array
+    11. includes() - checks if an element is included in an array
+
+a) updating values - use index
+b) size of an array
+c) adding elements to an array
+    - add at the end => .push()
+    - add at the start => .unshift()
+d) removing elements from an array
+    - remove at the end => .pop()
+    - remove at the start/node => removes element at the first index
+
+Task is slide 53,69,70
+Research on .splice()
+
+# splice
+    1. remove elements
+    2. add elements
+    3. replace elements
+
+# DAY 87 2025-05-20 (Tuesday)
+
+# OBJECTS
+    - Data structures used to store values/data in key-value pairs. 
+    - Equivalent to a dictionary in Python -> key:value
+
+    key-value pair -> combines property
+
+    key-value -> property
+
+# Characteristics of Objects
+    1. Stores data/values in key-value pairs.
+    2. Mutable.
+    3. Object keys are essentially strings.
+    4. Values can be of any datatype.
+    5. They have methods/operations.
+
+Syntax - let object_name = {
+    properties contained here
+}
+
+Key + Value = Property 
+
+# Key - Identifier of a property. Used to access values in an object    1. No spaces
+        - If your key is to have spaces, it needs to be in string form.
+            e.g. full name:"John Doe" - invaild key
+                 "full_name":"John Doe" - valid key
+    2. Can contain letters, digits and underscores and $
+    3. Can only start with _ or letter or $
+    4. Can't be named after key words embedded in VS code complier.
+
+name : "Brian"
+
+# Values - Data stored in those properties under a key.
+
+# Why use Objects?
+    1. Can be grouped into a single container
+    2. To store complex structured data
+    3. To represent/model real world entities
+
+# Ways to create Objects
+    1. Object Literal Syntax - directly creates key-value pairs
+
+    2. Object Constructor - bulit-in Object() constructor
+
+# Accessing Object Values/Properties
+    1. Using dot notation - simpler
+        Pros
+            - Simpler to use.
+        Cons
+            - Can't access values whose keys are in string form and spaced.
+
+            e.g. let person = {
+                name : "John",
+                "age" : 25,
+                "full address" : "Kimathi Street"
+            }
+            person.name     = "Jane"
+            person.age
+    2. Using bracket notation - dynamic
+        - object_name["key"] e.g. person["name"]
+                                  person["age"]
+
+        - keys % values are passed in string form.
+
+# Object Methods
+    - Operations you can carry out on an object.
+
+Object.keys(object) - returns the name of the keys in string form in an array.
+Object.values(object) - returns the values of the properties/object.
+Object.entries(object) - returns the key-value pairs (all properties).
+
+NB: All data above is stored in arrays.
+
+Array - JavaScript
+List - Python
+
+TASK: Slide 75 & Slide 76
+
+# DAY 88 2025-05-21 (Wednesday)
+
+let company = {
+        name: "TechNova Inc.",
+        founded: 2012,
+        departments: {
+          engineering: {
+            head: {
+              name: "Alice Johnson",
+              position: "VP of Engineering",
+            },
+            teams: {
+              frontend: {
+                lead: "Bob Smith",
+                members: [
+                  {
+                    name: "Carol",
+                    role: "Senior Developer",
+                    skills: { js: true, react: true,
+                                vue: false, db:[
+                        {
+                            postgresql:false,
+                            nosql: {
+
+                                mongodb:["True",{
+                                    learning: false,
+                                }]
+
+                            }
+                        }
+                    ] },
+                  },
+                  {
+                    name: "David",
+                    role: "Junior Developer",
+                    skills: { js: true, react: false, vue: true },
+                  },
+                ],
+              },
+              backend: {
+                lead: "Eve Black",
+                members: [
+                  {
+                    name: "Frank",
+                    role: "Senior Backend Dev",
+                    languages: ["Python", "Go", "Node.js"],
+                  },
+                  {
+                    name: "Grace",
+                    role: "DevOps",
+                    certifications: {
+                      aws: true,
+                      docker: true,
+                      kubernetes: true,
+                    },
+                  },
+                ],
+              },
+            },
+          },
+        },
+    };
+
+display mongodb - false, languages - node.js, kubernetes - true, docker - true. 
+display the keys of certifications and their length.
+display the values of skills, their length and reverse the order.
+
+objects - dot notation
+arrays - indices
+
+# DAY 89 2025-05-22 (Thursday)
+
+# TYPECASTING
+    - Explicitly changing the data type of a value from one to another
+        1. Number
+            a) Number()
+            b) ParseInt()
+            c) ParseFloat()
+
+        2. String
+            a) String ()
+            b) toString()
+    
+OPTIONAL CHAINING
+
+Uncaught TypeError - cannot read properties ... (undefined)
+    - Got to an undefined point/a wrong key and still went further to try and access the other nested objects.
+
+undefined
+    - Tried accessing a value using a wrong (or an undefined) key, then stopped there.
+
+# What is optional chaining?
+    - A feature that allows a user to safely access deeply nested properties of an object without worrying if part of the 
+    chain is null or undefined.
+    - Instead of throwing an error when you try to access a null (or an undefined) property optional chaining returns 
+    undefined immediately and stops.
+    - ?
+    - Once optional chaining encounters the first instance of null/undefined it stops at that point.
+
+# SPREAD OPERATOR
+    - A feature that allows a user to spread/expand/unpack elements of an iterable i.e. something that can be looped 
+    through. e.g. array, objects, strings
+
+    ...
+
+    let array = [1,2,3]
+
+    1. Copying Arrays
+    2. Merging Arrays
+    3. Copying Objects
+    4. Merging Objects
+
+# OPERATORS
+    - Symbols or keywords used to perform operations on values/variables.
+
+# Types of Operators
+    1. Arithmetic Operators - calculations
+        e.g. + , - , * , / , % , ** , ++ , --
+    2. Comparison Operators - comparing values
+            - returns boolean
+        e.g. > , < , == , != , >= , <=
+            JavaScript === - strict equality operator - checks for both the value and the type.
+                           - strict inequality operator - checks for both the value and the type as well.
+    3. Assignment Operators - value assignment
+        e.g. = , += , -= , /= , *= , %= , **=
+
+        += -> add and assign in one go
+        -= -> subtract and assign in one go
+
+    4. Logical Operators - logic
+        AND (&&) - returns true if all are true
+        OR (||) - returns true if at least one is true
+        NOT (!) - returns the opposite value - boolean
+
+# DAY 90 2025-05-23 (Friday)
+
+# Polymorphism - Taking more than one form.
+
+    Operator Overloading
++ -> add - arithmetic
+  -> concat - combining strings
+
+// strict equality and strict inequality
+
+    - comparison in both value and datatype
+    == loose equality operator
+
+    strict equality - to return true operands, they have to be equal in both value and datatype.
+
+    strict inequality - 
+
+Compound assigment operator
+
+# Conditional Statements
+    - Allows the program to make decisions based on whether a condition is true or false or whether a condtion is met or not.
+
+    1. if ... else ... if ... else
+        if - covers first condition. If condition is met, instruction under if executes.
+
+        else - executes when condition specified is not met.
+
+            if
+            ... - first condition
+            else if
+            ... - second condition
+            else
+            ... - false statement / last condition when none of the conditions are met
+
+- Conditional statements in JavaScript (JS) are written in block form.
+
+{}
+if (condition) {
+    true statement to execute
+} else {
+    false statement to execute
+}
+
+    2. switch (outdated) // NO LONGER USED
+    3. ternary operator (?) - shorthand for if else
+
+` ` - backticks
+
+TASK:
+1 - Slide 66
+
+2 - Get user input using prompt("Enter your age: "). If user is 18 or older, give feedback: 'You are old enough to drive'
+but if not 18 give another feedback stating to wait for the number of years he needs to turn 18.
+
+3 - Write a code which can give grades to students according to theirs scores:
+        80-100, A
+        70-79, B
+        60-69, C
+        50-59, D
+        0-49, F
+
+4 - Check if the season is Autumn, Winter, Spring or Summer. If the user input is:
+        September, October or November, the season is Autumn.
+        December, January or February, the season is Winter.
+        March, April or May, the season is Spring.
+        June, July or August, the season is Summer.
+
+# DAY 91 2025-05-26 (Monday)
+
+if (x === 5) {
+
+}
+
+if (x != 5) {
+
+}
+
+# TERNARY OPERATOR
+    - This is a shorthand for writing if...else... statements in JavaScript.
+
+    SYNTAX:
+        condition ? expression_if_true (condition is met) : expression_if_false (condition not met)
+
+TASK:
+    1. Using a ternary operator, check if a number is positive. Take user's input using prompt.
+    2. Using a ternary operator, check if a string is empty.
+    3. Using a ternary operator, check if a variable is null.
+
+# LOOPING/ITERATION 
+    - Repetitive execution of a block of code until a specified condition is met.
+
+# Benefits of Loops/Iterations
+    1. Perform repetitive tasks efficiently.
+    2. Parse through large amounts of data e.g. in an array.
+
+# Types of Loops
+    1. FOR loop
+    2. DO WHILE - executes a statement at least once before checking the condition
+    3. WHILE - checks for the condition before executing i.e. unknown number of loops.
+
+# Basic structure of a FOR loop
+    1. Initialization - Starting point.
+    2. Condition - Condition for the loop to continue.
+    3. Update - Updates values in the loop.
+
+Slide 78 & Slide 79
+
+# DAY 92 2025-05-27 (Tuesday)
+
+FUNCTIONS
+    - Reuseable block of code designed to perform specific tasks.
+
+# Why use functions?
+    1. Reuseability of code
+    2. Organization - readability
+    3. Minimize repetition
+    4. Modularity - small chunks (find errors and read easily)
+
+# Function Definition
+# SYNTAX:
+    function functionName() {
+        block to be executed
+    }
+
+function call
+functionName()
+
+TASK:
+    Slide 80 (1 - 10)
+
+Extra Tasks
+1. Write a JavaScript function that can take any number and outputs its cube.
+2. Write a JavaScript function that can reverse a number.
+3. Write a JavaScript function that can arrange a random string in alphabetical order.
+4. Write a JavaScript function that can accept a string as a parameter and converts the first letter of each word of the string in upper case.
+5. Write a JavaScript progran to calculate multiplication and division of two numbers.
+6. Write a JavaScript program that accepts two integers and displays the larger of the two.
+7. Write a JavaScript function to clone/duplicate an array.
+
+# DAY 93 2025-05-28 (Wednesday)
+
+ARROW FUNCTIONS
+    - Shorter way to write functions in JavaScript
+
+const functionName = () => {
+
+}
+
+# DAY 94 2025-05-29 (Thursday)
+
+# CALLBACK FUNCTIONS
+    - A function that can be passed as an argument to another function that the function executes (calls back) the 
+    passed-in function later.
+
+            RESEARCH ON:
+                - Asynchronous & Synchronous
+
+# FUNCTION EXPRESSION
+    - When a function is defined inside an expression usually by assigning it to a variable.
+
+            RESEARCH ON:
+                - Hoisting
+
+
+# FORM INPUTS
+    - Forms are the primary ways users with applications
+    - We need to make our applications interactive and dynamic
+    - JavaScript helps us access and manipulate form inputs real time
+
+- Using JavaScript you can:
+    1. Read user input
+    2. Validate user input
+    3. Dynamically update pages based on input
+
+- Process:
+    1. User fills form
+    2. JavaScript reads input values
+    3. JavaScript processes the data (calculations, modifications)
+
+document.getElementById() - Method used to select and access a single HTML element by its unique id attribute
+
+1) .innerHTML - full HTML content inside a tag/element
+2) .innerText - visible text inside an element
+3) .value - only accesses user input in forms ONLY
+
+
+payroll project
+    - index.html
+    - script.js
