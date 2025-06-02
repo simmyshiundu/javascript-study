@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <p>Arrays</p>
+    <script>
+        let company = {
+            name: "TechNova Inc.",
+            founded: 2012,
+            departments: {
+                engineering: {
+                    head: {
+                        name: "Alice Johnson",
+                        position: "VP of Engineering",
+                    },
+                    teams: {
+                        frontend: {
+                            lead: "Bob Smith",
+                            members: [
+                                {
+                                    name: "Carol",
+                                    role: "Senior Developer",
+                                    skills: {
+                                        js: true, react: true,
+                                        vue: false, db: [
+                                            {
+                                                postgresql: false,
+                                                nosql: {
+                                                    mongodb: ["False", {
+                                                        learning: false,
+                                                    }]
+                                                }
+                                            }
+                                        ]
+                                    },
+                                },
+                                {
+                                    name: "David",
+                                    role: "Junior Developer",
+                                    skills: { js: 1, react: 2, vue: 3 },
+                                },
+                            ],
+                        },
+                        backend: {
+                            lead: "Eve Black",
+                            members: [
+                                {
+                                    name: "Frank",
+                                    role: "Senior Backend Dev",
+                                    languages: ["Python", "Go", "Node.js"],
+                                },
+                                {
+                                    name: "Grace",
+                                    role: "DevOps",
+                                    certifications: {
+                                        aws: true,
+                                        docker: true,
+                                        kubernetes: true,
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                },
+            },
+        };
+        console.log(company) // displays properties of object
+        console.log(company.departments.engineering.teams.frontend.members[0].skills.db[0].nosql.mongodb[1].learning) // displays "false" in mongodb
+        console.log(company.departments.engineering.teams.backend.members[0].languages[2]) // displays "node.js" in languages
+        console.log(company.departments.engineering.teams.backend.members[1].certifications.docker) // displays "true" in docker
+        console.log(company.departments.engineering.teams.backend.members[1].certifications.kubernetes) // displays "true" in kubernetes
+        console.log(Object.keys(company.departments.engineering.teams.backend.members[1].certifications)) // displays the keys of "certifications"
+        console.log(Object.keys(company.departments.engineering.teams.backend.members[1].certifications).length) // displays length of "certifications"
+        console.log(Object.values(company.departments.engineering.teams.frontend.members[0].skills)) // displays "Carol's" skills
+        console.log(Object.values(company.departments.engineering.teams.frontend.members[0].skills).length) // displays length of array
+        console.log(Object.values(company.departments.engineering.teams.frontend.members[1].skills)) // displays "David's" skills
+        console.log(Object.values(company.departments.engineering.teams.frontend.members[1].skills).length) // displays length of array
+        console.log(Object.values(company.departments.engineering.teams.frontend.members[0].skills).reverse()) // reverses order
+        console.log(Object.values(company.departments.engineering.teams.frontend.members[1].skills).reverse()) // reverses order
+    </script>
+</body>
+
+</html>

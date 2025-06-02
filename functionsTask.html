@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions Tasks</title>
+</head>
+
+<body>
+    <div>
+        FUNCTIONS TASKS
+    </div>
+    <script>
+        // 1. Write a JavaScript function that can take any number and outputs its cube.
+        function cube(num) {
+            return num ** 3
+        }
+
+        // let number = parseFloat(prompt("Enter number: "))
+        // let cubed = cube(number)
+        // console.log(cubed)
+        console.log(cube(3)) // 27
+
+        // 2. Write a JavaScript function that can reverse a number.
+
+        function reverseNumber(num) {
+            // let string_num = String(num).split('').reverse().join('') // split string into array using .split() function to perform .reverse() function which is an array function then join with .join() function
+            // let reversed_number = parseInt(string_num) // converts string to integer
+            // return reversed_number
+            return parseInt(num.toString().split('').reverse().join(''))
+        }
+
+        // let number1 = 98765
+        // let reversed_number = reverseNumber(number1)
+        // console.log(reversed_number)
+        console.log(reverseNumber(98765)) // Output: 56789
+        console.log(reverseNumber(54321)) // Output: 12345
+
+        // 3. Write a JavaScript function that can arrange a random string in alphabetical order.
+
+        function sortStringAlphabetically(inputString) {
+            return inputString.split('').sort().join('')
+        }
+        // .split('') - Convert string to array of characters
+        // .sort() - Sort characters alphabetically
+        // .join(''); - Join them back into a string
+
+        let randomStr = "zxcvbnmlkjhgfdsaqwertyuiop";
+        let sortedStr = sortStringAlphabetically(randomStr);
+        console.log(sortedStr); // Output: "abcdefghijklmnopqrstuvwxyz"
+
+        // 4. Write a JavaScript function that can accept a string as a parameter and converts the first letter of each word of the string in upper case.
+
+        function capitalizeWords(str) {
+            return str.replace(/\b\w/g, function (char) {
+                return char.toUpperCase();
+            });
+        }
+
+        let result = capitalizeWords("hello world from javascript");
+        console.log(result); // Output: "Hello World From Javascript"
+
+
+        // 5. Write a JavaScript program to calculate multiplication and division of two numbers.
+
+        // Function to multiply two numbers
+        function multiply(a, b) {
+            return a * b;
+        }
+
+        // Function to divide two numbers
+        function divide(a, b) {
+            if (b === 0) {
+                return "Error: Division by zero is not allowed.";
+            }
+            return a / b;
+        }
+
+        let num1 = 10;
+        let num2 = 5;
+
+        let product = multiply(num1, num2);
+        let quotient = divide(num1, num2);
+
+        console.log(`Multiplication of ${num1} and ${num2} is: ${product}`);
+        console.log(`Division of ${num1} by ${num2} is: ${quotient}`);
+
+
+        // 6. Write a JavaScript program that accepts two integers and displays the larger of the two.
+
+        // // Accept two integers from the user
+        // let numOne = parseInt(prompt("Enter the first integer:"));
+        // let numTwo = parseInt(prompt("Enter the second integer:"));
+
+        // // Determine and display the larger number
+        // if (numOne > numTwo) {
+        //     alert("The larger number is: " + numOne);
+        // } else if (num2 > num1) {
+        //     alert("The larger number is: " + numTwo);
+        // } else {
+        //     alert("Both numbers are equal.");
+        // }
+
+        function displayLargerNumber(a, b) {
+            if (a > b) {
+                console.log(`${a} is larger than ${b}`);
+            } else if (b > a) {
+                console.log(`${b} is larger than ${a}`);
+            } else {
+                console.log(`${a} and ${b} are equal`);
+            }
+        }
+
+        displayLargerNumber(10, 20); // Output: 20 is larger than 10
+        displayLargerNumber(50, 25); // Output: 50 is larger than 25
+        displayLargerNumber(7, 7);   // Output: 7 and 7 are equal
+
+        // 7. Write a JavaScript function to clone/duplicate an array.
+
+        function cloneArray(arr) {
+            return [...arr]; // ... - spread operator
+        }
+        // Using slice():
+        function cloneArraySlice(arr) {
+            return arr.slice();
+        }
+
+        // Using Array.from():
+        function cloneArrayFrom(arr) {
+            return Array.from(arr);
+        }
+
+
+        // Using concat():
+        function cloneArrayConcat(arr) {
+            return [].concat(arr);
+        }
+
+
+        let original = [1, 2, 3];
+        let copy = cloneArray(original);
+        let copySlice = cloneArraySlice(original);
+        let copyFrom = cloneArrayFrom(original);
+        let copyConcat = cloneArrayConcat(original);
+
+        console.log(`... ${copy}`); // [1, 2, 3]
+        console.log(`.slice() ${copySlice}`);
+        console.log(`.from() ${copyFrom}`);
+        console.log(`.concat() ${copyConcat}`);
+        // console.log(original === copy); // false (different memory locations/references)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Function</title>
+</head>
+<body>
+    CALLBACK FUNCTION
+    <script>
+        // function greet(name, callback) {
+        //     console.log(`Hello ${name}`)
+        //     callback()
+        // }
+
+        // function sayGoodbye() {
+        //     console.log("Goodbye")
+        // }
+
+        // greet("Alice", sayGoodbye())
+
+        function greet(name, function2) {
+            console.log(`Hello ${name}`)
+            function2()
+        }
+
+        function function2() {
+            console.log("Goodbye")
+        }
+
+        greet("Alice", function2())
+
+        // hoisting
+    </script>
+</body>
+</html>

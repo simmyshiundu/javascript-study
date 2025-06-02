@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    ARROW FUNCTIONS
+    <script>
+        function add_nummbers (num1,num2) {
+            return num1 + num2
+        }
+
+        const add_numbers = (num1,num2) => {
+            return num1 + num2
+        }
+        sum = add_numbers(1,2)
+        console.log(sum)
+
+        // return here is explicitly defined - clearly stated
+        const add_numbers2 = (num1,num2) => {
+            let result = num1 + num2
+            return result
+        }
+        sum2 = add_numbers2(1,2)
+        console.log(sum2)
+
+        // return here is implicit - implied (assumes that it exists)
+        const add_numbers3 = (num1,num2) => num1 + num2
+        sum3 = add_numbers3(1,2)
+        console.log(sum3)
+
+    </script>
+</body>
+</html>

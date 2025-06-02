@@ -1,0 +1,227 @@
+WEDNESDAY_2025.03.26
+--------------------
+
+JavaScript events are actions or occurrences that happen in the system you are programming, which the system tells you about so your code can respond to them. Below is a list of common JavaScript events, along with examples of how and where they can be used:
+
+### 1. **Mouse Events**
+   - **click**: Triggered when an element is clicked.
+     - **Use**: Clicking a button, opening a link.
+   - **dblclick**: Triggered when an element is double-clicked.
+     - **Use**: Opening a file in a file explorer.
+   - **mousedown**: Triggered when a mouse button is pressed down.
+     - **Use**: Dragging an object or drawing on a canvas.
+   - **mouseup**: Triggered when a mouse button is released.
+     - **Use**: Closing a menu after dragging an item.
+   - **mouseenter**: Triggered when the mouse pointer enters an element.
+     - **Use**: Displaying tooltips or changing styles on hover.
+   - **mouseleave**: Triggered when the mouse pointer leaves an element.
+     - **Use**: Hiding tooltips or resetting hover styles.
+   - **mousemove**: Triggered when the mouse is moved within an element.
+     - **Use**: Interactive elements like drawing apps or mouse tracking.
+
+### 2. **Keyboard Events**
+   - **keydown**: Triggered when a key is pressed down.
+     - **Use**: Detecting input in text fields, custom keyboard shortcuts.
+   - **keyup**: Triggered when a key is released.
+     - **Use**: Live input validation or form submission.
+   - **keypress**: Triggered when a key is pressed down (deprecated in favor of `keydown` and `keyup`).
+     - **Use**: Detecting character input in a text field.
+
+### 3. **Focus Events**
+   - **focus**: Triggered when an element gains focus (e.g., when a text input is selected).
+     - **Use**: Auto-selecting text in an input field, validating user input.
+   - **blur**: Triggered when an element loses focus (e.g., when a text input is deselected).
+     - **Use**: Form validation when moving to the next field, hiding autocomplete suggestions.
+
+### 4. **Form Events**
+   - **submit**: Triggered when a form is submitted.
+     - **Use**: Validating form data before submission.
+   - **change**: Triggered when the value of an input, select, or textarea changes.
+     - **Use**: Automatically updating the UI based on user input (e.g., enabling/disabling form fields).
+   - **input**: Triggered when the user types or modifies an input field's value.
+     - **Use**: Real-time input validation or live search filtering.
+
+### 5. **Window Events**
+   - **load**: Triggered when the page has fully loaded (images, stylesheets, etc.).
+     - **Use**: Initializing scripts or elements after page content is ready.
+   - **resize**: Triggered when the window is resized.
+     - **Use**: Adjusting layout or design elements based on the window size (e.g., responsive design).
+   - **scroll**: Triggered when the page is scrolled.
+     - **Use**: Implementing infinite scroll, sticky headers, or animations triggered by scroll position.
+   - **unload**: Triggered when the document is unloaded (before the page is unloaded).
+     - **Use**: Saving user data or closing connections.
+
+### 6. **Touch Events** (mostly for mobile devices)
+   - **touchstart**: Triggered when a touch event starts (finger or stylus).
+     - **Use**: Initiating a gesture (e.g., swipe).
+   - **touchend**: Triggered when the touch ends (finger lifted).
+     - **Use**: Detecting swipe or tap actions.
+   - **touchmove**: Triggered when the touch point moves across the screen.
+     - **Use**: Dragging elements or gestures like pinch-to-zoom.
+
+### 7. **Media Events**
+   - **play**: Triggered when a media element starts playing.
+     - **Use**: Changing UI elements when a video starts playing.
+   - **pause**: Triggered when a media element is paused.
+     - **Use**: Displaying a play button or updating a progress bar.
+   - **ended**: Triggered when a media element finishes playing.
+     - **Use**: Showing a message or playing another video.
+   - **volumechange**: Triggered when the volume of a media element changes.
+     - **Use**: Updating volume controls or showing volume level.
+
+### 8. **Animation and Transition Events**
+   - **animationstart**: Triggered when a CSS animation starts.
+     - **Use**: Adding a class or triggering a callback when an animation begins.
+   - **animationend**: Triggered when a CSS animation ends.
+     - **Use**: Removing classes or triggering another action when animation completes.
+   - **transitionend**: Triggered when a CSS transition ends.
+     - **Use**: Chaining animations or handling layout changes after transitions.
+
+### 9. **Clipboard Events**
+   - **copy**: Triggered when content is copied to the clipboard.
+     - **Use**: Showing a notification or modifying copied content.
+   - **cut**: Triggered when content is cut to the clipboard.
+     - **Use**: Customizing cut actions (e.g., tracking user edits).
+   - **paste**: Triggered when content is pasted from the clipboard.
+     - **Use**: Automatically formatting or sanitizing pasted text.
+
+### 10. **Pointer Events**
+   - **pointerdown**: Triggered when a pointer (mouse, touch, or stylus) is pressed down.
+     - **Use**: Starting drag-and-drop actions.
+   - **pointerup**: Triggered when a pointer is released.
+     - **Use**: Ending drag actions.
+   - **pointermove**: Triggered when a pointer is moved.
+     - **Use**: Tracking pointer movement for custom drag operations.
+
+### 11. **Custom Events**
+   - **CustomEvent**: You can create your own custom events in JavaScript.
+     - **Use**: Emitting and listening for events between components or modules in an application.
+
+### Example of using an event:
+```javascript
+// Example: Click event on a button
+document.getElementById('myButton').addEventListener('click', function() {
+  alert('Button was clicked!');
+});
+```
+
+This list isn't exhaustive, but it covers the most commonly used JavaScript events and some examples of their practical uses.
+
+
+THURSDAY_2025.03.27
+--------------------
+In JavaScript, user events refer to actions or interactions that a user performs with elements in a web page. These events can be captured and responded to using event listeners. Some common user events include clicks, key presses, mouse movements, form submissions, and more.
+
+Here’s an overview of some basic user events and how to handle them using JavaScript:
+
+### Common User Events:
+
+1. **Click Event (`click`)**
+   - Triggered when a user clicks on an element (like a button, link, or image).
+   
+   ```javascript
+   document.getElementById("myButton").addEventListener("click", function() {
+       alert("Button clicked!");
+   });
+   ```
+
+2. **Mouse Events:**
+   - **Mouseover (`mouseover`)**: Triggered when the mouse pointer enters an element.
+   - **Mouseout (`mouseout`)**: Triggered when the mouse pointer leaves an element.
+   - **Mousemove (`mousemove`)**: Triggered whenever the mouse moves within an element.
+   
+   ```javascript
+   document.getElementById("myDiv").addEventListener("mouseover", function() {
+       console.log("Mouse is over the div!");
+   });
+   ```
+
+3. **Keyboard Events:**
+   - **Keydown (`keydown`)**: Triggered when a key is pressed down.
+   - **Keyup (`keyup`)**: Triggered when a key is released.
+   - **Keypress (`keypress`)**: Triggered when a character-producing key is pressed (deprecated, use `keydown` or `keyup`).
+
+   ```javascript
+   document.addEventListener("keydown", function(event) {
+       console.log("Key pressed: " + event.key);
+   });
+   ```
+
+4. **Focus and Blur Events:**
+   - **Focus (`focus`)**: Triggered when an element (like an input field) gains focus.
+   - **Blur (`blur`)**: Triggered when an element loses focus.
+   
+   ```javascript
+   document.getElementById("myInput").addEventListener("focus", function() {
+       console.log("Input field focused");
+   });
+   
+   document.getElementById("myInput").addEventListener("blur", function() {
+       console.log("Input field lost focus");
+   });
+   ```
+
+5. **Form Events:**
+   - **Submit (`submit`)**: Triggered when a form is submitted.
+   - **Change (`change`)**: Triggered when the value of an input element changes.
+   - **Input (`input`)**: Triggered when the value of an input field is modified.
+
+   ```javascript
+   document.getElementById("myForm").addEventListener("submit", function(event) {
+       event.preventDefault();
+       console.log("Form submitted!");
+   });
+   ```
+
+6. **Touch Events:**
+   - Used for touch devices.
+   - **Touchstart (`touchstart`)**: Triggered when a touch point is placed on the touch surface.
+   - **Touchend (`touchend`)**: Triggered when a touch point is removed from the touch surface.
+   - **Touchmove (`touchmove`)**: Triggered when a touch point moves along the touch surface.
+   
+   ```javascript
+   document.getElementById("myDiv").addEventListener("touchstart", function() {
+       console.log("Touch started");
+   });
+   ```
+
+7. **Resize Event:**
+   - Triggered when the window is resized.
+   
+   ```javascript
+   window.addEventListener("resize", function() {
+       console.log("Window resized");
+   });
+   ```
+
+8. **Scroll Event:**
+   - Triggered when the user scrolls the page or an element with overflow.
+   
+   ```javascript
+   window.addEventListener("scroll", function() {
+       console.log("Page scrolled");
+   });
+   ```
+
+### Event Delegation:
+Instead of attaching event listeners to each individual element, you can use **event delegation**. This involves adding an event listener to a parent element and letting it capture events from child elements, which is useful for handling dynamic content.
+
+```javascript
+document.getElementById("parentDiv").addEventListener("click", function(event) {
+    if (event.target && event.target.matches("button.className")) {
+        console.log("Button clicked inside parentDiv");
+    }
+});
+```
+
+### Event Object:
+When an event is triggered, an **event object** is passed to the event handler, which contains useful information about the event, such as the element that triggered it, the mouse position, key pressed, etc.
+
+```javascript
+document.getElementById("myButton").addEventListener("click", function(event) {
+    console.log(event.target);  // The element that was clicked
+    console.log(event.clientX); // X-coordinate of mouse click
+});
+```
+
+These are just some of the common user events you can listen to in JavaScript. Let me know if you want examples of more specific events or additional help with event handling!

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operators</title>
+</head>
+
+<body>
+    Spread Operators
+    <script>
+        //1. Copy Arrays
+        // let num = [1, 2, 3, 4, 5]
+        // let num2 = [...num]
+        // console.log(num2)
+
+        //2. Merging Arrays
+        let num = [1, 2, 3, 4, 5]
+        let num2 = [6, 7, 8, 9, 10]
+        let num3 = [...num,...num2]
+        console.log(num3)
+
+        //3. Copying Objects
+        let table1 = {
+            height : "90cm",
+            width : "100cm"
+        }
+
+        let table2 = {
+            ...table1
+        }
+        console.log(table2)
+
+        //4. Merging Objects
+        let table3 = {
+            color : "gray",
+            condition : "new"
+        }
+
+        let table4 = {
+            ...table1,...table3,
+        }
+
+        let table5 = {
+            ...table1,...table3,
+            date_sold : "2025-05-17"
+        }
+        console.log(table4)
+        console.log(table5)
+        
+    </script>
+</body>
+
+</html>

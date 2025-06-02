@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Task</title>
+</head>
+
+<body>
+    <p>(Slide 53, Slide 69, Slide 70)</p>
+    <script>
+        //  Slide 53-1. Clean up the following variable to give the clean version in lower case. Using inbuilt methods in the 
+        // string class     f_name = “  JOHn  .“ to “john”
+
+        let name = " JOHn .";
+        name = name.replace('.', ''); // string method replaces old substring with new substring
+        name = name.trim(); // string method removes whitespaces
+        name = name.toLowerCase(); // string method converts entire string to lowercase
+        console.log(name);
+
+        //  Slide 53-2. Slice the below string to get you the resulting sentence:
+
+        //  sentence_one = “The Dog Breed is German Shepherd” only display “Breed is German”
+        let sentenceOne = "The Dog Breed is German Shepherd";
+        sentenceOne = sentenceOne.substring(8, 23);
+        console.log(sentenceOne);
+
+        //  sentence_two = “Defeats for the Clinton forces, this was her moment of triumph” only display “Clinton forces”
+        let sentenceTwo = "Defeats for the Clinton forces, this was her moment of triumph";
+        sentenceTwo = sentenceTwo.substring(16, 30);
+        console.log(sentenceTwo);
+
+        //  Slide 53-3. Split the below sentence using a semicolon i.e ; And display length of the result.
+        //                      “The lazy dog; ran so fast; it hit the wall.”
+
+        let text = "The lazy dog; ran so fast; it hit the wall.";
+        let splitText = text.split(';');
+        console.log(text);
+        console.log(splitText);
+        console.log(text.length);
+        console.log(splitText.length);
+
+        // Slide 69 - Assignment 1: Create an Array
+        // Create an array named colors with the following elements: 'red', 'green', 'blue'.
+
+        let colors = ['Red', 'Green', 'Blue'];
+        console.log(colors);
+
+        // Slide 69 - Assignment 2: Access and Modify Array Elements
+        // Given the array colors, access the second element and change it to 'pink'. Then, display the modified array.
+
+        colors[1] = 'Pink';
+        console.log(colors);
+
+        // Slide 69 - Assignment 3: Determine the Length of an Array
+        // Given the array colors, determine its length and store it in a variable lengthOfColors. 
+        // Then, display lengthOfColors.
+
+        let lengthOfColors = colors.length;
+        console.log(lengthOfColors);
+
+        // Slide 69 - Assignment 4: Use .pop() Method
+        // Given the array colors, use the .pop() method to remove the last element from the array. 
+        // Then, display the modified array.
+
+        colors.pop();
+        console.log("Modified array",colors);
+
+        // Slide 70 - Assignment 1: Combine Arrays
+        // Given two arrays arr1 and arr2, combine them into a single array combinedArray using the .concat() method. 
+        // Then, remove the first element from combinedArray using the .shift() method. 
+        // Finally, display the modified combinedArray.
+
+        let arr1 = ["China","Japan"];
+        let arr2 = ["North Korea","South Korea"];
+        let arr3 = arr1.concat(arr2);
+        console.log("Combined array",arr3);
+        arr3.shift();
+        console.log("Modified combined array",arr3);
+
+        // Slide 70 - Assignment 2: Extract Subarray
+        // Given an array “sourceArray”, extract a subarray “extractedArray” from index 2 to index 4 using the .slice() method. 
+        // Then, modify the extractedArray by replacing its elements with 'x', 'y', and 'z' using the .splice() method. 
+        // Finally, display both the sourceArray and the modified extractedArray.
+
+        let sourceArray = ['a','b','c','d','e','f'];
+        let extractedArray = sourceArray.slice(2,5) // .slice() method
+        console.log(extractedArray)
+        modifiedExtractedArray = extractedArray.splice(0,3,'x','y','z')
+        console.log(modifiedExtractedArray)
+        console.log(sourceArray)
+        
+    </script>
+</body>
+
+</html>

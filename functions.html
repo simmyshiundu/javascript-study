@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <div>
+        FUNCTIONS
+    </div>
+    <script>
+        // non-parameterized functions - no parameters
+        function displayName() {
+            let name = "Jane"
+            console.log(name)
+        }
+        displayName()
+
+        // parameterized functions - has parameters
+        function displayValue(value) {
+            console.log(value)
+        }
+        let numbers = [1,2,3,4]
+        displayValue(numbers)
+
+        //scenario 1 - array is stored in memory (RAM)
+        let x = [1,2,3,4,5]
+        let y = x
+        console.log(y === x) // true because of same memory location
+
+        // scenario 2 - 
+        let a = [1,2,3,4,5]
+        let b = [1,2,3,4,5]
+        console.log(a === b) // false because of different memory locations
+    </script>
+</body>
+</html>

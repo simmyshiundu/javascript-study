@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Objects</title>
+</head>
+
+<body>
+  <p>JS Objects</p>
+  <script>
+    let cars = {
+      make: 'Toyota',
+      model: 'Camry',
+      year: 2020
+    };
+    console.log(Object.keys(cars));    // Output: ['make', 'model', 'year']
+    console.log(Object.values(cars));  // Output: ['Toyota', 'Camry', 2020]
+    console.log(Object.entries(cars)); // Output: [['make', 'Toyota'], ['model', 'Camry'], ['year', 2020]]
+
+    let person = {
+      name: "Stacy",
+      age: 20,
+      height: "178cm",
+      job: "Software Developer",
+      isMarried: false,
+      "full address": "Nairobi" // key in string form can only be accessed with bracket notation not using dot notation
+    }
+    console.log(person)
+    console.log(person.job) // dot notation
+    let height = person.height // dot notation
+    console.log(height)
+    console.log(person["age"]) // bracket notation
+    console.log(person["full address"]) // bracket notation
+    let key = "name"
+    console.log(person[key]) // bracket notation
+
+    let numbers = {
+      "first": 1,
+      "second": {
+        third: 3
+      }
+    }
+    console.log(numbers.second.third)
+
+    let user = {
+      name: "Alice",
+      hobbies: ["cycling", "painting"],
+      posts: [
+        {
+          id: 1,
+          title: "My first post",
+          comments: [
+            { id: 101, text: "Great post!" },
+            { id: 102, text: "Thanks for sharing." },
+          ],
+        },
+        {
+          id: 2,
+          title: "Another day",
+          comments: [],
+        },
+      ],
+    };
+    console.log(user.posts[0].comments[1].text)
+    console.log(Object.keys(user)) // keys in object/dictionary
+    let keys = Object.keys(user)
+    let values = Object.values(user)
+    let entries = Object.entries(user)
+    console.log(keys)
+    console.log(values)
+    console.log(entries)
+
+    let car = {
+      make: "Toyota",
+      yom: 2005,
+      past_owners: {
+        first: "Joyce",
+        second: "Trevor",
+        third: null,
+        fourth: {
+          owner1: "John",
+          owner2: "Anne"
+        }
+      }
+    }
+    console.log(car)
+    console.log(car.past_owners.fifth)
+    console.log(car?.past_owners)
+    console.log(car?.past_owners?.fifth?.owner1)
+    console.log(car?.past_owners?.third)
+    // console.log(car.past_owners.third.owner1) - Uncaught TypeError
+    console.log(car?.past_owners?.third?.owner1)
+
+    let arr1 = [1, 2, 3, 4, 5]
+    let arr2 = [6, 7, 8]
+    let arr3 = [...arr1, ...arr2, 9, 10]
+    console.log(arr3)
+    
+  </script>
+</body>
+
+</html>

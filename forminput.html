@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input</title>
+</head>
+<body>
+    <div>
+        Form Input
+    </div>
+    <div>
+        <h1 id="num1">3</h1> <!-- JS uses id attribute to identify an element -->
+        <h2 id="num2">4</h2> <!-- CSS uses class attribute to identify an element -->
+        <h3 id="num3"></h3>
+        <h1>5</h1>
+    </div>
+    <script>
+        let num1 = Number(document.getElementById("num1").innerHTML)
+        let num2 = Number(document.getElementById("num2").innerHTML)
+        let num3 = num1 + num2
+        document.getElementById("num3").innerHTML = num3
+    </script>
+</body>
+</html>

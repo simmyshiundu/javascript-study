@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Study</title>
+</head>
+<body>
+    <p>JS Arrays</p>
+
+    <script>
+        let x ="Jane Doe"
+        // x. - method
+        let arr = [1,2,3,4,5,"John",false,[5,6,7,[8,9,10,[11,"Jane"]]]]
+
+        // size of array
+        let size = arr.length
+
+        arr[5] = "Joyce"
+        console.log(arr) // array itself
+        console.log(arr[5]) // "Joyce"
+        console.log(arr[7][3][3][1]) // "Jane"
+        console.log("Size of array",size) // 8 - length of array
+
+        // array methods vs. string methods => TAKE NOTE
+
+        // adds element/value at the end of an array
+        arr.push(true)
+        arr.push(100,101,"Mark")
+        console.log("Pushed array",arr)
+
+        // add element/value at the start of an array
+        arr.unshift("JS","Python","Rust")
+        console.log("Unshifted array",arr)
+
+        // remove the last element of an array
+        arr.pop()
+        console.log("Popped array",arr)
+
+        // remove the first element of an array
+        arr.shift()
+        console.log("Shifted array",arr)
+
+        // reverse the order of an array
+        arr.reverse()
+        console.log("Reversed array",arr)
+
+        // sort array in ascending order
+        arr.sort()
+        console.log("Sorted arr",arr)
+
+        // take portion of the array/sliced array forms a new array
+        let arr2 = arr.slice(2,7)
+        console.log("Sliced array",arr2)
+
+        // display last occurrence of an element
+        let last_occurrence = arr.lastIndexOf("Rustrrrr")
+        console.log("Last occurrence",last_occurrence)
+
+        // checks if a value is contained in an array - returns boolean
+        console.log("Boolean",arr.includes("Python"))
+
+        // copy array elements to another position in an array
+        arr.copyWithin(2,0)
+        // arr.copyWithin(1,2,4)
+        console.log("Copy within",arr)
+
+        // concat - combining two arrays
+        arr3 = [200,300,400]
+        let result = arr.concat(arr3)
+        console.log("Concat",result)
+
+        // splice - removing elements
+        let fruits = ["Mango","Apple","Banana","Orange"]
+        fruits.splice(1,2) // starting point, how many elements to delete/remove
+        console.log(fruits)
+
+        // splice - adding elements
+        let numbers = [1,2,3,4,5]
+        numbers.splice(2,0,7,8) // starting point, how many elements to delete/remove, added/new elements
+        console.log(numbers)
+
+        // splice - replacing elements
+        let names = ["Jane","John","Jake"]
+        names.splice(0,0,"Mike") // starting point, how many elements to delete/remove, replaced/elements
+        console.log(names)
+    </script>
+</body>
+</html>

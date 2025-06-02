@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects Task</title>
+</head>
+<body>
+    <p>Slide 75, Slide 76</p>
+    <script>
+        // Create a new file called objectTask and attempt the below questions:
+        //      my_object = [23, “Jane”, 560, [“Lesson”, “Maths”, {“currency” : “KES”}], 987, 76,”John”]
+
+        let my_object = [23, "Jane", 560, ["Lesson", "Maths", {"currency" : "KES"}], 987, 76,"John"]
+        console.log(my_object)
+
+        // Display:
+        // 1. KES
+        console.log(my_object[3][2]["currency"])
+
+        // 2. 560
+        console.log(my_object[2])
+
+        // 3. Maths
+        console.log(my_object[3][1])
+
+        // 4. In the object with the key "currency", add another key “amount” with value 90.
+        my_object[3][2]['amount'] = 90
+        console.log(my_object)
+
+        // 5. Reverse 987 to 789 without using an inbuilt-method or Assigning 789 manually.
+        //      Hint: arrays can be reversed using reverse() functions.
+        my_object[4] = parseInt(my_object[4].toString().split('').reverse().join(''))
+        console.log(my_object[4])
+        
+        // 6. Change the name “John” to “Jane” . 
+        my_object[6] = "Jane"
+        console.log(my_object)
+    </script>
+</body>
+</html>
